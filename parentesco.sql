@@ -41,7 +41,7 @@ FROM
     LEFT JOIN parentesco par2 ON alu.id = par2.idAluno
     LEFT JOIN responsavel res2 ON par2.idResponsavel = res2.id
 WHERE
-    par1.idResponsavel <> par2.idResponsavel group by aluno;
+    par1.idResponsavel <> par2.idResponsavel and alu.id == 1 group by aluno;
 
 
 SELECT
